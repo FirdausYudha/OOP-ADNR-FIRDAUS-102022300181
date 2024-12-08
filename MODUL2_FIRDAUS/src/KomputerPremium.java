@@ -31,17 +31,17 @@ class KomputerPremium extends Komputer {
     
     // To do: Buatlah method Pesan sesuai dengan ketentuan
     public void Pesan(int nomorKomputer) {
-        
+        System.out.println("Memesan komputer nomor      : " + nomorKomputer);
     }
     
     // To do: Buatlah method TambahLayanan sesuai dengan ketentuan
     public void TambahLayanan(String makanan) {
-        
+        System.out.println("Menambah layanan makanan    : " + makanan);
     }
     
     // To do: Buatlah method TambahLayanan memakai Polymorphism Overloading sesuai dengan ketentuan
     public void TambahLayanan(String makanan, String minuman) {
-        
+        System.out.println("Menambah layanan makanan : " + makanan + "\n minuman    : " + minuman);
     }
     
 }
