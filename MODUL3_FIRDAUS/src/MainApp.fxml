@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainAppController">
+    <center>
+        <TableView fx:id="taskTable">
+            <columns>
+                <TableColumn text="Title" fx:id="titleCol"/>
+                <TableColumn text="Priority" fx:id="priorityCol"/>
+                <TableColumn text="Due Date" fx:id="dueDateCol"/>
+                <TableColumn text="Status" fx:id="statusCol"/>
+            </columns>
+        </TableView>
+    </center>
+    <right>
+        <VBox spacing="10" prefWidth="300" BorderPane.alignment="CENTER">
+            <Label text="Title"/>
+            <TextField fx:id="titleField"/>
+            <Label text="Description"/>
+            <TextArea fx:id="descriptionField" prefRowCount="3" wrapText="true"/>
+            <Label text="Priority"/>
+            <ComboBox fx:id="priorityBox"/>
+            <Label text="Due Date"/>
+            <DatePicker fx:id="dueDatePicker"/>
+            <HBox spacing="10">
+                <Button text="Add" onAction="#addTask"/>
+                <Button text="Delete" onAction="#deleteTask"/>
+                <Button text="Mark Complete" onAction="#markTaskComplete"/>
+            </HBox>
+        </VBox>
+    </right>
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+</BorderPane>
